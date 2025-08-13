@@ -1,25 +1,24 @@
 /* script.js */
 
-// Espera a que todo el contenido del DOM esté cargado antes de ejecutar el script.
-// Es una buena práctica para evitar errores si el script se carga antes que el HTML.
+// Esperamos a que toda la página cargue para asegurarnos de que el JavaScript
+// no intente usar elementos que todavía no existen.
 document.addEventListener('DOMContentLoaded', function () {
     
-    // Obtener referencias a los elementos del DOM
-    const galleryModal = document.getElementById('galleryModal');
-    const modalImage = document.getElementById('modalImage');
+  // Guardamos referencias a las partes importantes del modal de la galería
+  const galleryModal = document.getElementById('galleryModal'); // El modal en sí
+  const modalImage = document.getElementById('modalImage'); // La imagen que se muestra ampliada
 
-    // Bootstrap dispara un evento 'show.bs.modal' justo antes de abrir un modal.
-    // Escuchamos ese evento en nuestro modal específico.
-    galleryModal.addEventListener('show.bs.modal', function (event) {
-    
-      // 'event.relatedTarget' es el elemento que disparó el modal (en este caso, la imagen clickeada).
-        const triggerImage = event.relatedTarget;
-    
-      // Obtenemos la URL de la imagen del atributo 'src' de la imagen clickeada.
-        const imageUrl = triggerImage.getAttribute('src');
-    
-      // Asignamos esa URL a la imagen que está dentro del modal.
-        modalImage.setAttribute('src', imageUrl);
-    });
+  // Cuando se vaya a abrir el modal, capturamos el evento
+  galleryModal.addEventListener('show.bs.modal', function (event) {
+  
+      // La imagen que disparó el modal (la que clickeamos)
+      const triggerImage = event.relatedTarget;
+  
+      // Sacamos la dirección de esa imagen
+      const imageUrl = triggerImage.getAttribute('src');
+  
+      // Ponemos esa dirección en la imagen del modal para mostrarla en grande
+      modalImage.setAttribute('src', imageUrl);
+  });
 
 });

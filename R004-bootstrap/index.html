@@ -1,25 +1,29 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Festival TungaTunga!</title>
     
-    <!-- Bootstrap -->
+    <!-- Cargamos Bootstrap para estilos y responsive -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Iconos de Bootstrap -->
+    <!-- Iconos de Bootstrap para usar íconos en el sitio -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Nuestro estilo personalizado -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Barra de navegacion -->
+    <!-- Barra de navegación fija en la parte superior -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
+            <!-- Logo / Nombre del festival -->
             <a class="navbar-brand fw-bold" href="#">TungaTunga!</a>
+            <!-- Botón para mostrar menú en pantallas pequeñas -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Enlaces de navegación -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#lineup">Lineup</a></li>
@@ -32,51 +36,67 @@
         </div>
     </nav>
 
-    <!-- Seccion principal (bienvenida) -->
+    <!-- Sección principal de bienvenida -->
     <header class="bienvenida text-center">
         <div class="container">
             <h1 class="display-2 fw-bold text-white">TungaTunga!</h1>
             <p class="lead fs-4 text-white">El festival que hace latir el corazón del cuarteto. Córdoba, Argentina.</p>
+            <!-- Botón que lleva a la sección de tickets -->
             <a href="#tickets" class="btn btn-primary btn-lg mt-3 fw-bold">¡Conseguí tus Entradas!</a>
         </div>
     </header>
 
-    <!-- LineUp -->
+    <!-- Sección LineUp: muestra los artistas que participan -->
     <section id="lineup" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">LineUp de Artistas</h2>
             <div class="row">
+                <!-- Cada tarjeta representa un artista -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100 text-center shadow-sm">
                         <img src="img/elLoco.jpg" class="card-img-top" alt="El Loco Amato">
-                        <div class="card-body"><h5 class="card-title fw-bold">El Loco Amato</h5><p class="card-text">Haciendo grande al cuarteto.</p></div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">El Loco Amato</h5>
+                            <p class="card-text">Haciendo grande al cuarteto.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100 text-center shadow-sm">
                         <img src="img/ulises_bueno.jpg" class="card-img-top" alt="Ulises Bueno">
-                        <div class="card-body"><h5 class="card-title fw-bold">Ulises Bueno</h5><p class="card-text">Pura energía y pasión.</p></div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Ulises Bueno</h5>
+                            <p class="card-text">Pura energía y pasión.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100 text-center shadow-sm">
                         <img src="img/qlokura.jpeg" class="card-img-top" alt="Qlokura">
-                        <div class="card-body"><h5 class="card-title fw-bold">Qlokura</h5><p class="card-text">El sonido que te mueve.</p></div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Qlokura</h5>
+                            <p class="card-text">El sonido que te mueve.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Horarios -->
+    <!-- Sección Horarios: muestra cuándo toca cada artista -->
     <section id="horarios" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-5">Minuto a Minuto</h2>
+
             <!-- Horarios para pantallas grandes -->
             <div class="d-none d-lg-block">
                 <table class="table table-striped table-hover text-center">
                     <thead class="table-dark">
-                        <tr><th>Hora</th><th>Viernes 14 - Noviembre</th><th>Sábado 15 - Noviembre</th></tr>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Viernes 14 - Noviembre</th>
+                            <th>Sábado 15 - Noviembre</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr><td>23:00</td><td>Apertura: Alex Caram</td><td>Primer priteau de la noche</td></tr>
@@ -86,19 +106,36 @@
                     </tbody>
                 </table>
             </div>
-            <!-- Horarios para celulares -->
+
+            <!-- Horarios para celulares (accordion) -->
             <div class="d-lg-none">
                 <div class="accordion" id="scheduleAccordion">
+                    <!-- Viernes -->
                     <div class="accordion-item">
-                        <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#day1">Viernes 15</button></h2>
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#day1">Viernes 15</button>
+                        </h2>
                         <div id="day1" class="accordion-collapse collapse show" data-bs-parent="#scheduleAccordion">
-                            <div class="accordion-body"><strong>23:00:</strong> Apertura a cargo de DJ<br><strong>01:00:</strong> Ulises Bueno <br><strong>03:00:</strong> El Loco Amato <br><strong>05:00:</strong> Gran cierre primera jornada<br></div>
+                            <div class="accordion-body">
+                                <strong>23:00:</strong> Apertura a cargo de DJ<br>
+                                <strong>01:00:</strong> Ulises Bueno <br>
+                                <strong>03:00:</strong> El Loco Amato <br>
+                                <strong>05:00:</strong> Gran cierre primera jornada<br>
+                            </div>
                         </div>
                     </div>
+                    <!-- Sábado -->
                     <div class="accordion-item">
-                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#day2">Sábado 16</button></h2>
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#day2">Sábado 16</button>
+                        </h2>
                         <div id="day2" class="accordion-collapse collapse" data-bs-parent="#scheduleAccordion">
-                            <div class="accordion-body"><strong>23:00:</strong> Apertura: Primer priteau<br><strong>01:00:</strong> Sorpresa<br><strong>03:00:</strong> Qlokura<br><strong>05:30:</strong> Cierre a puro Tunga-Tunga!</div>
+                            <div class="accordion-body">
+                                <strong>23:00:</strong> Apertura: Primer priteau<br>
+                                <strong>01:00:</strong> Sorpresa<br>
+                                <strong>03:00:</strong> Qlokura<br>
+                                <strong>05:30:</strong> Cierre a puro Tunga-Tunga!
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -106,24 +143,32 @@
         </div>
     </section>
 
-    <!-- Galeria -->
+    <!-- Galería de imágenes -->
     <section id="galeria" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">¡Viví la Fiesta!</h2>
             <div class="row g-4">
-                <div class="col-md-4"><img src="img/luces.jpg" class="img-fluid rounded shadow gallery-img" alt="Luces del festival" data-bs-toggle="modal" data-bs-target="#galleryModal"></div>
-                <div class="col-md-4"><img src="img/gente.jpg" class="img-fluid rounded shadow gallery-img" alt="Gente en el concierto" data-bs-toggle="modal" data-bs-target="#galleryModal"></div>
-                <div class="col-md-4"><img src="img/q-lokura.webp" class="img-fluid rounded shadow gallery-img" alt="Banda en el escenario" data-bs-toggle="modal" data-bs-target="#galleryModal"></div>
+                <!-- Cada imagen se puede ampliar al hacer clic -->
+                <div class="col-md-4">
+                    <img src="img/luces.jpg" class="img-fluid rounded shadow gallery-img" alt="Luces del festival" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/gente.jpg" class="img-fluid rounded shadow gallery-img" alt="Gente en el concierto" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/q-lokura.webp" class="img-fluid rounded shadow gallery-img" alt="Banda en el escenario" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Ubicacion -->
+    <!-- Sección Ubicación: mapa y dirección -->
     <section id="ubicacion" class="py-5 bg-light">
         <div class="container text-center">
             <h2 class="mb-5">¿Dónde es la Cita?</h2>
             <p class="lead">Te esperamos en el corazón de Córdoba para vivir dos noches inolvidables.</p>
             <p><strong>Dirección:</strong> Estadio Mario Alberto Kempes, Av. Cárcano s/n, Córdoba.</p>
+            <!-- Mapa embebido de Google Maps -->
             <div class="ratio ratio-16x9 shadow-sm rounded mt-4">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.0569105490143!2d-64.2480598243958!3d-31.38520847427177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432991315555555%3A0x1535e58f50rr!2sEstadio%20Mario%20Alberto%20Kempes!5e0!3m2!1ses!2sar!4v1678886012345" 
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -131,30 +176,42 @@
         </div>
     </section>
 
-    <!-- tickets -->
+    <!-- Sección de Tickets -->
     <section id="tickets" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">¡No te quedes afuera!</h2>
             <div class="row justify-content-center">
+                <!-- Pase general -->
                 <div class="col-lg-4 mb-4">
                     <div class="card text-center h-100 shadow-sm">
                         <div class="card-header"><h4>Pase General</h4></div>
-                        <div class="card-body"><h5 class="card-title display-4">$15000</h5><p class="card-text">Acceso a los 2 días.</p></div>
-                        <div class="card-footer"><button class="btn btn-outline-primary">Comprar Ahora</button></div>
+                        <div class="card-body">
+                            <h5 class="card-title display-4">$15000</h5>
+                            <p class="card-text">Acceso a los 2 días.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-outline-primary">Comprar Ahora</button>
+                        </div>
                     </div>
                 </div>
+                <!-- Pase VIP / TungaTunga -->
                 <div class="col-lg-4 mb-4">
                     <div class="card text-center h-100 border-primary shadow">
                         <div class="card-header bg-primary text-white"><h4>Pase TungaTunga</h4></div>
-                        <div class="card-body"><h5 class="card-title display-4">$25000</h5><p class="card-text">Acceso VIP + Merchandising oficial.</p></div>
-                        <div class="card-footer"><button class="btn btn-primary">Comprar Ahora</button></div>
+                        <div class="card-body">
+                            <h5 class="card-title display-4">$25000</h5>
+                            <p class="card-text">Acceso VIP + Merchandising oficial.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary">Comprar Ahora</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer con redes sociales -->
     <footer class="bg-dark text-white text-center py-4">
         <div class="container">
             <p class="mb-2">&copy; 2025 Festival TungaTunga! - Organizado a puro Fernet.</p>
@@ -166,18 +223,18 @@
         </div>
     </footer>
 
-    <!-- MOD -->
+    <!-- Modal para ampliar imágenes de la galería -->
     <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-body p-0">
-            <img id="modalImage" src="" class="img-fluid" alt="Imagen ampliada">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <img id="modalImage" src="" class="img-fluid" alt="Imagen ampliada">
+                </div>
             </div>
-        </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS Bundle -->
+    <!-- Scripts de Bootstrap y nuestro JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

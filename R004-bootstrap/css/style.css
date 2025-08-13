@@ -1,30 +1,25 @@
-/* style.css */
-
-/* 
-    Variable de color personalizada para Bootstrap.
-    Al sobreescribir esta variable, Bootstrap usará nuestro color naranja
-    para todos sus componentes principales (botones, bordes, etc.).
-*/
+/* Definimos el color principal del sitio usando variables de CSS */
 :root {
-    --bs-primary: #F08A0E;
-    --bs-primary-rgb: 240, 138, 14;
+    --bs-primary: #F08A0E; /* Color naranja para botones, navbar, etc. */
+    --bs-primary-rgb: 240, 138, 14; /* Versión RGB del color principal, útil para sombras o transparencias */
 }
 
-/* Estilo para la sección principal (Hero) */
+/* Estilo para la sección principal de bienvenida (Hero) */
 .bienvenida {
-    background-image: url('../img/img-bienvenida.jfif') ;
-    background-size: cover;
-    color: white;
-    padding: 10rem 0;    
+    background-image: url('../img/img-bienvenida.jfif'); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre toda la sección */
+    color: white; /* Texto en blanco para que resalte sobre la imagen */
+    padding: 10rem 0; /* Espacio arriba y abajo para que se vea grande y centrada */
 }
 
 /* Estilo para las imágenes de la galería */
 .gallery-img {
-    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
-    transition: transform 0.2s ease-in-out; /* Animación suave */
+    cursor: pointer; /* Cambia el cursor para indicar que la imagen se puede hacer clic */
+    transition: transform 0.2s ease-in-out; /* Animación suave al interactuar */
 }
 
+/* Efecto al pasar el mouse sobre la imagen */
 .gallery-img:hover {
-    transform: scale(1.05); /* Agranda la imagen ligeramente al pasar el cursor */
-    opacity: 0.8; /* Le da una leve transparencia */
+    transform: scale(1.05); /* Agranda un poco la imagen */
+    opacity: 0.8; /* Le da un toque de transparencia */
 }
