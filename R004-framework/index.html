@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Festival TungaTunga!</title>   
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-icons@1.0.1/foundation-icons.css">
+        <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <body>
+        <!-- Barra de navegacion -->
+        <div class="top-bar-container" data-sticky-container>
+            <div class="sticky" data-sticky data-options="marginTop:0;">
+                <div class="top-bar secondary">
+                    <div class="top-bar-left">
+                        <ul class="menu">
+                            <li class="menu-text" style="font-weight: bold; color:rgb(255, 255, 255)">TungaTunga!</li>
+                        </ul>
+                    </div>
+                    <div class="top-bar-right">
+                        <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+                            <li><a href="#lineup" style="color:rgb(255, 255, 255)">Lineup</a></li>
+                            <li><a href="#horarios" style="color:rgb(255, 255, 255)">Horarios</a></li>
+                            <li><a href="#galeria" style="color:rgb(255, 255, 255)">Galería</a></li>
+                            <li><a href="#ubicacion" style="color:rgb(255, 255, 255)">Ubicación</a></li>
+                            <li><a href="#tickets" style="color:rgb(255, 255, 255)">Tickets</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seccion principal (bienvenida) -->
+        <header class="bienvenida text-center">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x align-center">
+                    <div class="cell large-8">
+                        <h1 class="font-weight-bold style="font-size: 3.5rem">TungaTunga!</h1>
+                        <p class="lead">El festival que hace latir el corazón del cuarteto. Córdoba, Argentina.</p>
+                        <a href="#tickets" class="button primary large-button font-weight-bold">¡Conseguí tus Entradas!</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- LineUp -->
+        <section id="lineup" class="padding-vertical-5">
+            <div class="grid-container">
+                <h2 class="text-center margin-bottom-5">LineUp de Artistas</h2>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell large-4 medium-6 margin-bottom-4">
+                        <div class="card text-center">
+                            <img src="img/elLoco.jpg" alt="El Loco Amato">
+                            <div class="card-section">
+                                <h5 class="font-weight-bold">El Loco Amato</h5>
+                                <p>Haciendo grande al cuarteto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell large-4 medium-6 margin-bottom-4">
+                        <div class="card text-center">
+                            <img src="img/ulises_bueno.jpg" alt="Ulises Bueno">
+                            <div class="card-section">
+                                <h5 class="font-weight-bold">Ulises Bueno</h5>
+                                <p>Pura energía y pasión.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell large-4 medium-6 margin-bottom-4">
+                        <div class="card text-center">
+                            <img src="img/qlokura.jpeg" alt="Qlokura">
+                            <div class="card-section">
+                                <h5 class="font-weight-bold">Qlokura</h5>
+                                <p>El sonido que te mueve.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horarios -->
+        <section id="horarios" class="padding-vertical-5;" style="background-color: #f8f9fa;">
+            <div class="grid-container">
+                <h2 class="text-center margin-bottom-5">Minuto a Minuto</h2>
+                <!-- Horarios para pantallas grandes -->
+                <div class="show-for-large">
+                    <table class="hover text-center">
+                        <thead style="background-color: #212529; color: white;" >
+                            <tr>
+                                <th class="text-center">Hora</th>
+                                <th class="text-center">Viernes 14 - Noviembre</th>
+                                <th class="text-center">Sábado 15 - Noviembre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>23:00</td><td>Apertura: Alex Caram</td><td>Primer priteau de la noche</td></tr>
+                            <tr><td>01:00</td><td>Ulises Bueno</td><td>Sorpresa</td></tr>
+                            <tr><td>03:00</td><td>El loco Amato</td><td>Qlokura</td></tr>
+                            <tr><td>05:30</td><td>Cierre con Show de fuegos artificiales</td><td>Gran cierre a puro TungaTunga!</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Horarios para celulares -->
+                <div class="hide-for-large">
+                    <ul class="accordion" data-accordion>
+                        <li class="accordion-item is-active" data-accordion-item>
+                            <a href="#" class="accordion-title">Viernes 15</a>
+                            <div class="accordion-content" data-tab-content>
+                                <strong>23:00:</strong> Apertura a cargo de DJ<br>
+                                <strong>01:00:</strong> Ulises Bueno <br>
+                                <strong>03:00:</strong> El Loco Amato <br>
+                                <strong>05:00:</strong> Gran cierre primera jornada<br>
+                            </div>
+                        </li>
+                        <li class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title">Sábado 16</a>
+                            <div class="accordion-content" data-tab-content>
+                                <strong>23:00:</strong> Apertura: Primer priteau<br>
+                                <strong>01:00:</strong> Sorpresa<br>
+                                <strong>03:00:</strong> Qlokura<br>
+                                <strong>05:30:</strong> Cierre a puro Tunga-Tunga!
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section id="galeria" class="padding-vertical-5">
+            <div class="grid-container">
+                <h2 class="text-center margin-bottom-5">¡Viví la Fiesta!</h2>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell medium-4"><img src="img/luces.jpg" class="thumbnail gallery-img" alt="Luces del festival" data-open="galleryModal" data-img-src="img/luces.jpg"></div>
+                    <div class="cell medium-4"><img src="img/gente.jpg" class="thumbnail gallery-img" alt="Gente en el concierto" data-open="galleryModal" data-img-src="img/gente.jpg"></div>
+                    <div class="cell medium-4"><img src="img/q-lokura.webp" class="thumbnail gallery-img" alt="Banda en el escenario" data-open="galleryModal" data-img-src="img/q-lokura.webp"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ubicacion -->
+        <section id="ubicacion" class="padding-vertical-5" style="background-color: #f8f9fa;">
+            <div class="grid-container text-center">
+                <h2 class="margin-bottom-5">¿Dónde es la Cita?</h2>
+                <p class="lead">Te esperamos en el corazón de Córdoba para vivir dos noches inolvidables.</p>
+                <p><strong>Dirección:</strong> Estadio Mario Alberto Kempes, Av. Cárcano s/n, Córdoba.</p>
+                <div class="responsive-embed widescreen">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.0569105490143!2d-64.2480598243958!3d-31.38520847427177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432991315555555%3A0x1535e58f50rr!2sEstadio%20Mario%20Alberto%20Kempes!5e0!3m2!1ses!2sar!4v1678886012345" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- tickets -->
+        <section id="tickets" class="padding-vertical-5">
+            <div class="grid-container">
+                <h2 class="text-center margin-bottom-5">¡No te quedes afuera!</h2>
+                <div class="grid-x grid-margin-x align-center">
+                    <div class="cell large-4 medium-6 margin-bottom-4">
+                        <div class="callout text-center">
+                            <h4>Pase General</h4>
+                            <h5 class="display-4">$15000</h5>
+                            <p>Acceso a los 2 días.</p>
+                            <button class="button hollow">Comprar Ahora</button>
+                        </div>
+                    </div>
+                    <div class="cell large-4 medium-6 margin-bottom-4">
+                        <div class="callout primary text-center">
+                            <h4>Pase TungaTunga</h4>
+                            <h5 class="display-4">$25000</h5>
+                            <p>Acceso VIP + Merchandising oficial.</p>
+                            <button class="button">Comprar Ahora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center padding-vertical-1" style="background-color: #343a40; color: white;">
+            <div class="grid-container">
+                <p class="margin-bottom-4">&copy; 2025 Festival TungaTunga! - Organizado a puro Fernet.</p>
+                <div>
+                    <a href="#" class="padding-horizontal-1" style="color: white; font-size: 1.5rem;"><i class="fi-social-instagram"></i></a>
+                    <a href="#" class="padding-horizontal-1" style="color: white; font-size: 1.5rem;"><i class="fi-social-facebook"></i></a>
+                    <a href="#" style="color: white; font-size: 1.5rem;"><i class="fi-social-twitter"></i></a> <!-- No hay icono de TikTok por defecto, se usa Twitter como ejemplo -->
+                </div>
+            </div>
+        </footer>
+
+        <!-- MODAL -->
+        <div class="reveal" id="galleryModal" data-reveal>
+            <img id="modalImage" src="" alt="Imagen ampliada">
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <!-- Foundation JS -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+
+    </body>
+</html>

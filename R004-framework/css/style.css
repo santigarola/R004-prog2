@@ -1,0 +1,30 @@
+/* style.css */
+
+
+:root {
+    --bs-primary: #F08A0E;
+    --bs-primary-rgb: 240, 138, 14;
+}
+
+/* Estilo para la sección principal (Hero) */
+.bienvenida {
+    background-image: url('../img/img-bienvenida.jfif') ;
+    background-size: cover;
+    color: white;
+    padding: 10rem 0;    
+}
+
+/* Estilo para las imágenes de la galería */
+.gallery-img {
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    transition: transform 0.2s ease-in-out; /* Animación suave */
+}
+
+.gallery-img:hover {
+    transform: scale(1.05); /* Agranda la imagen ligeramente al pasar el cursor */
+    opacity: 0.8; /* Le da una leve transparencia */
+}
+
+.top-bar, .top-bar ul {
+    background-color: var(--bs-primary);
+} 
