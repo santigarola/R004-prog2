@@ -1,4 +1,5 @@
 /* script.js */
+$(document).foundation();
 
 // Esperamos a que toda la página cargue para asegurarnos de que el JavaScript
 // no intente usar elementos que todavía no existen.
