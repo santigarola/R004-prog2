@@ -11,30 +11,34 @@
         <link rel="stylesheet" href="css/style.css"> <!-- Nuestra hoja de estilo personalizado -->
     </head>
 
-    <body>
-        <!-- Menú superior que siempre queda visible -->
-        <div class="top-bar-container" data-sticky-container>
-            <div class="sticky" data-sticky data-options="marginTop:0;">
-                <div class="top-bar secondary">
-                    <!-- Nombre o logo del festival -->
-                    <div class="top-bar-left">
-                        <ul class="menu">
-                            <li class="menu-text" style="font-weight: bold; color:white">TungaTunga!</li>
-                        </ul>
-                    </div>
-                    <!-- Links que llevan a distintas partes de la página -->
-                    <div class="top-bar-right">
-                        <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
-                            <li><a href="#lineup" style="color:white">Lineup</a></li>
-                            <li><a href="#horarios" style="color:white">Horarios</a></li>
-                            <li><a href="#galeria" style="color:white">Galería</a></li>
-                            <li><a href="#ubicacion" style="color:white">Ubicación</a></li>
-                            <li><a href="#tickets" style="color:white">Tickets</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <!-- Menú para móviles (Title Bar) -->
+    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium" style="background-color:#F08A0E;">
+        <div class="title-bar-left">
+            <span class="title-bar-title" style="color:white; font-weight:bold;">TungaTunga!</span>
         </div>
+            <div class="title-bar-right">
+            <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+        </div>
+    </div>
+    <!-- Menú para tablets y escritorio (Top Bar) -->
+    <div class="top-bar" id="main-menu" style="background-color:#F08A0E;">
+        <!-- Logo a la izquierda -->
+        <div class="top-bar-left show-for-medium">
+            <ul class="menu">
+                <li class="menu-text" style="color:white; font-weight:bold;">TungaTunga!</li>
+            </ul>
+        </div>
+        <!-- Links de navegación -->
+        <div class="top-bar-right">
+            <ul class="menu vertical medium-horizontal">
+                <li><a href="#lineup" style="color:white;">Lineup</a></li>
+                <li><a href="#horarios" style="color:white;">Horarios</a></li>
+                <li><a href="#galeria" style="color:white;">Galería</a></li>
+                <li><a href="#ubicacion" style="color:white;">Ubicación</a></li>
+                <li><a href="#tickets" style="color:white;">Tickets</a></li>
+            </ul>
+        </div>
+    </div>
 
         <!-- Sección de bienvenida con título, descripción y botón -->
         <header class="bienvenida text-center">
@@ -50,7 +54,7 @@
         </header>
 
         <!-- Lineup: Muestra artistas en tarjetas con foto y descripción -->
-        <section id="lineup" class="padding-vertical-5">
+        <section id="lineup" class="padding-vertical-4 margin-bottom-5">
             <div class="grid-container">
                 <h2 class="text-center margin-bottom-5">LineUp de Artistas</h2>
                 <div class="grid-x grid-margin-x">
@@ -89,7 +93,7 @@
         </section>
 
         <!-- Horarios: versión tabla para PC y acordeón para celular -->
-        <section id="horarios" class="padding-vertical-5" style="background-color: #f8f9fa;">
+        <section id="horarios" class="padding-vertical-5 style="background-color: #f8f9fa;">
             <div class="grid-container">
                 <h2 class="text-center margin-bottom-5">Minuto a Minuto</h2>
                 
@@ -214,9 +218,6 @@
         <!-- Scripts para que Foundation funcione -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
-        <script>
-          $(document).foundation();
-        </script>
         <script src="js/script.js"></script> 
     </body>
 </html>

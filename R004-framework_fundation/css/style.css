@@ -30,3 +30,14 @@
     background-color: var(--bs-primary); /* Usa el color principal */
 }
 
+/* ---- Espaciado entre secciones ---- */
+/* Le decimos que cada sección principal tenga un margen inferior para separarse de la siguiente */
+header.bienvenida,
+section {
+    margin-bottom: 4rem; /* Puedes ajustar este valor. 3rem es un buen punto de partida. */
+}
+
+/* Opcional: Le quitamos el margen a la última sección para que no haya espacio extra antes del footer */
+section:last-of-type {
+    margin-bottom: 0;
+}
